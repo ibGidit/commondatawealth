@@ -1,0 +1,22 @@
+{
+  "object_identifiers": [
+    {
+      "oid": "OID-DEMO-2025-001",
+      "name": "Example Public Record",
+      "description": "Demo identifier for a sample record.",
+      "category": "Public Archive",
+      "status": "Active",
+      "created_at": "2025-03-15T12:00:00Z",
+      "updated_at": "2025-03-15T12:00:00Z"
+    },
+    {
+      "oid": "OID-DEMO-2025-002",
+      "name": "Example Policy Document",
+      "description": "Demo identifier for a sample policy document.",
+      "category": "Policy Archive",
+      "status": "Draft",
+      "created_at": "2025-03-16T14:30:00Z",
+      "updated_at": "2025-03-16T14:30:00Z"
+    }
+  ]
+}
