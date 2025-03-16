@@ -1,0 +1,108 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "CommonDataWealth API",
+    "description": "API for managing metadata and object identifiers.",
+    "version": "1.0.0",
+    "contact": {
+      "name": "API Support",
+      "email": "support@commondatawealth.org"
+    }
+  },
+  "host": "github.com/ibGidit/commondatawealth",
+  "basePath": "/api/v1",
+  "schemes": ["https"],
+  "produces": ["application/json"],
+  "consumes": ["application/json"],
+  "paths": {
+    "/metadata": {
+      "get": {
+        "summary": "Retrieve all metadata records",
+        "operationId": "getMetadata",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "$ref": "#/definitions/MetadataList"
+            }
+          }
+        }
+      }
+    },
+    "/metadata/{id}": {
+      "get": {
+        "summary": "Retrieve metadata by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Metadata record retrieved",
+            "schema": {
+              "$ref": "#/definitions/Metadata"
+            }
+          },
+          "404": {
+            "description": "Metadata not found"
+          }
+        }
+      }
+    },
+    "/objects": {
+      "get": {
+        "summary": "Retrieve all object identifiers",
+        "operationId": "getObjects",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "$ref": "#/definitions/ObjectList"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "MetadataList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Metadata"
+      }
+    },
+    "Metadata": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "object_identifier": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "source": { "type": "string" }
+      }
+    },
+    "ObjectList": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Object"
+      }
+    },
+    "Object": {
+      "type": "object",
+      "properties": {
+        "oid": { "type": "string" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "status": { "type": "string" },
+        "created_at": { "type": "string", "format": "date-time" },
+        "updated_at": { "type": "string", "format": "date-time" }
+      }
+    }
+  }
+}

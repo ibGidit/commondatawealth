@@ -1,0 +1,20 @@
+{
+  "metadata": [
+    {
+      "id": "D-001",
+      "name": "Sample Legal Document",
+      "description": "This is a placeholder metadata entry for demonstration purposes.",
+      "object_identifier": "OID-DEMO-2025-001",
+      "timestamp": "2025-03-15T12:00:00Z",
+      "source": "CommonDataWealth Public API"
+    },
+    {
+      "id": "D-002",
+      "name": "Government Notice Sample",
+      "description": "Demonstration metadata for a fictional government notice.",
+      "object_identifier": "OID-DEMO-2025-002",
+      "timestamp": "2025-03-16T14:30:00Z",
+      "source": "CommonDataWealth Public API"
+    }
+  ]
+}
